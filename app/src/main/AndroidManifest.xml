@@ -34,6 +34,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Plaid">
+        <!--主页-->
         <activity
             android:name=".ui.HomeActivity"
             android:label="@string/app_name"
@@ -60,7 +61,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.HomeActivity" />
         </activity>
-
+    <!--详情页面-->
         <activity
             android:name=".ui.DesignerNewsStory"
             android:parentActivityName=".ui.HomeActivity"

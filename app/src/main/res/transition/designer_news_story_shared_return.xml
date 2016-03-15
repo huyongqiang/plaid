@@ -30,7 +30,6 @@
         <targets>
             <target android:targetId="@id/story_title_background" />
         </targets>
-        <arcMotion />
     </changeBounds>
 
 </transitionSet>
