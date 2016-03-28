@@ -176,7 +176,7 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.FilterView
     @Override
     public void onBindViewHolder(final FilterViewHolder vh, int position) {
         final Source filter = filters.get(position);
-        vh.isSwipeable = filter.isSwipeDismissable();
+        vh.isSwipeable = true;//filter.isSwipeDismissable();
         vh.filterName.setText(filter.name);
         vh.filterName.setEnabled(filter.active);
         if (filter.iconRes > 0) {

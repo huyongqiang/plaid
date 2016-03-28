@@ -135,7 +135,7 @@
             android:translationY="196dp"
             android:elevation="@dimen/z_fab"
             android:background="@drawable/fab"
-            android:visibility="gone"
+            android:visibility="visible"
             android:theme="@style/ExpandedFabTheme">
 
             <LinearLayout

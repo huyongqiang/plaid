@@ -285,9 +285,13 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         return holder;
     }
 
+    /**
+     * 这里开始从网络加载图片
+     */
     private void bindDribbbleShotHolder(final Shot shot,
                                         final DribbbleShotHolder holder) {
         final int[] imageSize = shot.images.bestSize();
+//        final int[] imageSize = new int[] { 400, 300 };
         Glide.with(host)
                 .load(shot.images.best())
                 .listener(new RequestListener<String, GlideDrawable>() {
@@ -342,7 +346,7 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 .fitCenter()
                 .override(imageSize[0], imageSize[1])
-                .into(new DribbbleTarget(holder.image, false));
+                .into(new DribbbleTarget(holder.image, true));
     }
 
     @NonNull

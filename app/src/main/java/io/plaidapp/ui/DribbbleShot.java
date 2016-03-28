@@ -187,7 +187,7 @@ public class DribbbleShot extends Activity {
                 expandImageAndFinish();
             }
         };
-
+        //// TODO: 2016-03-23 加载相关的图片
         // load the main image
         final int[] imageSize = shot.images.bestSize();
         Glide.with(this)
