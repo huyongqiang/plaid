@@ -153,6 +153,7 @@ public class HomeActivity extends Activity {
                 checkEmptyState();
             }
         };
+        // TODO: 2016/3/15 专场动画。
         adapter = new FeedAdapter(this, dataManager, columns, PocketUtils.isPocketInstalled(this));
         grid.setAdapter(adapter);
         layoutManager = new GridLayoutManager(this, columns);
