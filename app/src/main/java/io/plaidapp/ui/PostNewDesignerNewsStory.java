@@ -80,7 +80,7 @@ public class PostNewDesignerNewsStory extends Activity {
                 // it no longer makes sense.  Let the launching window know it's a drag dismiss so
                 // that it can restore any UI used as an entering shared element
                 setResult(RESULT_DRAG_DISMISSED);
-                finish();
+                finishAfterTransition();
             }
 
             @Override

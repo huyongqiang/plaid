@@ -269,7 +269,7 @@ public class HomeActivity extends Activity {
 
     @OnClick(R.id.fab)
     protected void fabClick() {
-        if (designerNewsPrefs.isLoggedIn()) {
+//        if (!designerNewsPrefs.isLoggedIn()) {
             Intent intent = new Intent(this, PostNewDesignerNewsStory.class);
             intent.putExtra(FabDialogMorphSetup.EXTRA_SHARED_ELEMENT_START_COLOR,
                     ContextCompat.getColor(this, R.color.accent));
@@ -278,14 +278,15 @@ public class HomeActivity extends Activity {
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, fab,
                     getString(R.string.transition_new_designer_news_post));
             startActivityForResult(intent, RC_NEW_DESIGNER_NEWS_STORY, options.toBundle());
-        } else {
-            Intent intent = new Intent(this, DesignerNewsLogin.class);
-            intent.putExtra(FabDialogMorphSetup.EXTRA_SHARED_ELEMENT_START_COLOR,
-                    ContextCompat.getColor(this, R.color.accent));
-            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, fab,
-                    getString(R.string.transition_designer_news_login));
-            startActivityForResult(intent, RC_NEW_DESIGNER_NEWS_LOGIN, options.toBundle());
-        }
+//        } else {
+        // TODO: 2016-04-12 观察效果。。
+//            Intent intent = new Intent(this, DesignerNewsLogin.class);
+//            intent.putExtra(FabDialogMorphSetup.EXTRA_SHARED_ELEMENT_START_COLOR,
+//                    ContextCompat.getColor(this, R.color.accent));
+//            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, fab,
+//                    getString(R.string.transition_designer_news_login));
+//            startActivityForResult(intent, RC_NEW_DESIGNER_NEWS_LOGIN, options.toBundle());
+//        }
     }
 
     BroadcastReceiver postStoryResultReceiver = new BroadcastReceiver() {
